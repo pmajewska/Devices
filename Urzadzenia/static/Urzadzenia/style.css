@@ -1,0 +1,177 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(155, 143, 143, 0.933);
+}
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+main {
+  width: 830px;
+  padding: 20px 88px 102px 88px;
+}
+aside {
+  width: 370px;
+  margin: 0px;
+  background-color: #005334;
+}
+.cv-photo {
+  margin: 0px;
+}
+.header-secondary {
+  color: white;
+}
+.contact-links {
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.bold {
+  font-weight: 700;
+}
+.address {
+  margin-left: 50;
+}
+.list-secondary {
+  color: #fb6d3a;
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 0px;
+  padding-left: 0px;
+  list-style-position: inside;
+}
+.list-secondary-item {
+  color: white;
+}
+.contact-block {
+  margin-top: 51px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.media-block {
+  margin-top: 47px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.soft-skils-block {
+  margin-top: 47px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.hobby-block {
+  margin-top: 47px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.acceptation-block {
+  margin-top: 47px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.main-description {
+  width: 660px;
+}
+h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 35px;
+  margin-left: 40px;
+}
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+.list-primary {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  padding-left: 0px;
+  list-style-position: inside;
+}
+.list-primary-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  text-decoration: none;
+}
+.header-primary {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 12px;
+}
+.jobs {
+  width: 660px;
+  margin-bottom: 43px;
+  text-align: justify;
+}
+.job-position {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.highlight {
+  color: #fb6d3a;
+}
+.job-date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #a8a8a8;
+}
+.job-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  padding-left: 0px;
+  list-style-position: inside;
+}
+.education {
+  width: 660px;
+  margin-bottom: 43px;
+}
+.degree {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.education-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  padding-left: 0px;
+  list-style-position: inside;
+}
+.certificates {
+  width: 660px;
+  margin-bottom: 43px;
+}
+.certificates-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  padding-left: 0px;
+  list-style-position: inside;
+}
+.print-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #fb6d3a;
+}
