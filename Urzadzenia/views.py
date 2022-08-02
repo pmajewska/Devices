@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Urzadzenia, Laboratorium
 
+def home(request):
+    return render(request, 'szablon.html', {})
+
+
 def index(request):
     laboratorium = Laboratorium.objects.all()
     dane = {'laboratorium': laboratorium}

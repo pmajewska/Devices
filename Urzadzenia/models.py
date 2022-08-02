@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Laboratorium(models.Model):
     def __str__(self):
@@ -31,3 +32,11 @@ class Urzadzenia(models.Model):
         verbose_name = 'Urządzenie'
         verbose_name_plural = 'Urządzenia'
 
+class Post(models.Model):
+    Nazwa = models.ForeignKey(Urzadzenia, on_delete=models.CASCADE, null=True)
+    Urzytkownik = models.ForeignKey(User, on_delete=models.PROTECT)
+    Czas_i_data_rozpoczęcia_pracy = models.DateTimeField()
+    Czas_i_data_zakończenia_pracy = models.DateTimeField()
+    Uwagi = models.TextField(blank=True)
+    def __str__(self):
+        return str(self.Nazwa) + ' | ' + str(self.Urzytkownik) + ' | ' + str(self.Czas_i_data_rozpoczęcia_pracy)
