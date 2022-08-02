@@ -1,0 +1,9 @@
+{% extends 'szablon.html' %} {% block dev %} {% if dev_number %}
+<h1>{{ dev_number.Nazwa }}</h1>
+<p>{{ dev_number.Opis }}</p>
+<p>{{ dev_number.Numer_inwentarzowy }}</p>
+<p>{{ dev_number.Numer_laboratorium }}</p>
+<p>{{ dev_number.Osoba_odpowiedzialna }}</p>
+{% else %}
+<p>Nie ma urządzenia o takim id</p>
+{% endif %} {% endblock dev%}

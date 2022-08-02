@@ -25,6 +25,7 @@
       <main>
         <div class="main-description">
           <p class="description">Tu będzie główny div</p>
+          {% block dev %} {% endblock dev %}
         </div>
 
         <div class="jobs">
@@ -191,8 +192,8 @@
               >majewska.p@gmail.com</a
             >
           </p>
-          {% for lab in wszystko %}
-          <p><a href="lab//{{ lab.id }}"> {{ lab.Numer_laboratorium }} </a></p>
+          {% for lab in laboratorium %}
+          <p><a href="/lab/{{ lab.id }}"> {{ lab.Numer_laboratorium }} </a></p>
           {% endfor %}
         </div>
 

@@ -1,0 +1,5 @@
+{% extends 'szablon.html' %} {% block dev %} {% if lab_urzadzenie %}
+<p>Wszystkie Urządzenia dostępne w tym pomieszczeniu</p>
+{% for dev in lab_urzadzenie %}
+<p><a href="/dev/{{ dev.id }}/"> {{ dev.Nazwa }} </a></p>
+{% endfor %} {% else %} {% endif %} {% endblock %}
