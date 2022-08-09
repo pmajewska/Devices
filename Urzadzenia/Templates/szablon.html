@@ -1,272 +1,248 @@
-<!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urządzenia</title>
-    {% load static %}
+{% extends 'base.html' %} {% block content %}
+<div class="wrapper">
+  <main>
+    <div class="main-description">
+      <p class="description">Tu będzie główny div</p>
+      {% block dev %} {% endblock dev %}
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'Urzadzenia/style.css' %}"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="wrapper">
-      <main>
-        <div class="main-description">
-          <p class="description">Tu będzie główny div</p>
-          {% block dev %} {% endblock dev %}
-        </div>
-
-        <div class="jobs">
-          <h2 class="header-primary">Doświadczenie</h2>
-          <h3 class="job-position">
-            Adiunkt naulowo-dydaktyczny
-            <span class="highlight">Politechnika Wrocławska</span>
-          </h3>
-          <p class="job-date">10.2011 - obecnie</p>
-          <ul class="job-list">
-            <li>
-              Synteza, oczyszczanie i analiza związków fosforoorganicznych
-            </li>
-            <li>Biotransformacje hydroksyfosfonianów i hydroksyfosfinianów</li>
-            <li>
-              Określanie konfiguracji absolutnej różnych klas związków za pomocą
-              NMR
-            </li>
-            <li>
-              Udział w konferencjach krajowych i międzynarodowych - prezentacje,
-              postery
-            </li>
-            <li>Publikacje o zasięgu międzynarodowym</li>
-            <li>Patenty</li>
-          </ul>
-          <h3 class="job-position">
-            Stażysta w Maco Productions Polonia Sp. z o.o.
-            <span class="highlight">Program „Mozart” Miasta Wrocław</span>
-          </h3>
-          <p class="job-date">10.2016 – 09.2017</p>
-          <ul class="job-list">
-            <li>
-              Opracowanie nowej metody oznaczania 5-(hydroksymetylo)furfuralu
-              zgodnie z normami FDA, USP i ICH oraz walidacja opracowanej metody
-            </li>
-          </ul>
-          <h3 class="job-position">
-            Specjalista ds walidacji
-            <span class="highlight">Maco Productions Polonia Sp. z o.o. </span>
-          </h3>
-          <p class="job-date">01.2015 - 01.2016</p>
-          <ul class="job-list">
-            <li>
-              Walidacja metod analitycznych zgodnie z normami ICH, FDA i USP
-            </li>
-          </ul>
-          <h3 class="job-position">
-            Stażysta w Maco Productions Polonia Sp. z o.o.
-            <span class="highlight"
-              >Projekt „Innowacyjny transfer” - Agencja Rozwoju Innowacji
-              S.A.</span
-            >
-          </h3>
-          <p class="job-date">05.2013 – 07.2013</p>
-          <ul class="job-list">
-            <li>Analiza składu zanieczyszczeń płynu medycznego</li>
-          </ul>
-          <h3 class="job-position">
-            Asystent naulowo-dydaktyczny
-            <span class="highlight">Politechnika Wrocławska</span>
-          </h3>
-          <p class="job-date">03.2008 - 09.2011</p>
-          <ul class="job-list">
-            <li>Badania naukowe</li>
-            <li>Dydaktyka</li>
-          </ul>
-          <h3 class="job-position">
-            Staż podoktorski
-            <span class="highlight"
-              >Uniwersytet Louisa Pasteura w Strasburgu</span
-            >
-          </h3>
-          <p class="job-date">02.2007 – 01.2008</p>
-          <ul class="job-list">
-            <li>
-              Otrzymanie i badanie biopolimerów do wprowadzania leków drogą
-              pokarmową
-            </li>
-          </ul>
-        </div>
-        <div class="education">
-          <h2 class="header-primary">Edukacja</h2>
-          <h3 class="degree">
-            Doktor nauk chemicznych
-            <span class="highlight">Politechnika Wrocławska</span>
-          </h3>
-          <ul class="education-list">
-            <li>
-              Wyróżnienie pracy doktorskiej nadane przez Politechnikę Wrocławską
-            </li>
-            <li>
-              Wyróżnienie w konkursie na najlepszą pracę doktorską nadane przez
-              Polskie Towarzystwo Chemiczne (Łódź, 12.09.2008).
-            </li>
-          </ul>
-
-          <h3 class="degree">
-            Magister chemii
-            <span class="highlight">Uniwersytet Wrocławski</span>
-          </h3>
-          <ul class="education-list">
-            <li>Coroczne stypendia naukowe</li>
-          </ul>
-        </div>
-        <div class="certificates">
-          <h2 class="header-primary">Kursy i szkolenia</h2>
-
-          <ul class="certificates-list">
-            <li>Praktyczne aspekty analizy białek i peptydów metodą HPLC</li>
-            <li>
-              Szkolenie z zakresu obsługi cytometru przepływowego BD FACSVerse
-            </li>
-            <li>
-              Advanced Academic English – szkolenie z zakresu dydaktyki w j.
-              obcym
-            </li>
-            <li>Szkolenie z zakresu podstaw chromatografii gazowej</li>
-            <li>
-              Podstawy zastosowania technik chromatograficznych w analityce oraz
-              optymalizacja metod HPLC
-            </li>
-            <li>
-              Walidacja metod analitycznych według wymagań farmaceutycznych oraz
-              normy ISO 17025
-            </li>
-            <li>
-              Dobra praktyka wytwarzania (GMP) – wymagania prawne, zasady i
-              wdrożenie systemu
-            </li>
-            <li>
-              Dobra praktyka laboratoryjna (GLP) – praktyczne aspekty wdrożenia
-              w laboratorium
-            </li>
-            <li>
-              Przygotowanie materiałów i prowadzenie zajęć dydaktycznych z
-              wykorzystaniem ICT
-            </li>
-            <li>
-              Projektowanie i realizacja instalacji technologicznej do produkcji
-              leków biotechnologicznych
-            </li>
-          </ul>
-        </div>
-        <div>
-          <button onclick="window.print()">
-            <span class="print-button">Wydrukuj CV</span>
-          </button>
-        </div>
-      </main>
-      <aside>
-        <h1>Paulina Majewska</h1>
-        <div>tu bedzie jakieś zdjęcie</div>
-        <div class="contact-block">
-          <h2 class="header-secondary">Kontakt</h2>
-          <p class="contact-links">
-            <span class="bold">Adres:</span>
-
-            ul. Sobótki 19A, 55-040 Kobierzyce<br />
-
-            <span class="bold">Tel:</span>
-            <a class="contact-links" href="tel:792096616">792096616</a><br />
-            <span class="bold">E-mail:</span>
-            <a class="contact-links" href="mailto:majewska.p@gmail.com"
-              >majewska.p@gmail.com</a
-            >
-          </p>
-          {% for lab in laboratorium %}
-          <p><a href="/lab/{{ lab.id }}"> {{ lab.Numer_laboratorium }} </a></p>
-          {% endfor %}
-        </div>
-
-        <div class="media-block">
-          <h2 class="header-secondary">Społeczności</h2>
-          <p class="contact-links">
-            <span class="bold">LinkedIn:</span>
-            <a
-              class="contact-links"
-              href="https://pl.linkedin.com/in/paulina-majewska-378348108"
-              >https://pl.linkedin.com/in/paulina-majewska-378348108</a
-            ><br />
-            <span class="bold">Goldenline:</span>
-            <a
-              class="contact-links"
-              href="https://www.goldenline.pl/paulina-majewska20/"
-              >https://www.goldenline.pl/paulina-majewska20/</a
-            >
-          </p>
-        </div>
-
-        <div class="soft-skils-block">
-          <h2 class="header-secondary">Umiejętności</h2>
-          <ul class="list-secondary">
-            <li>
-              <span class="list-secondary-item"
-                >Język angielski – poziom B2 (prezentacje, pisanie publikacji,
-                branżowa literatura)</span
-              >
-            </li>
-            <li>
-              <span class="list-secondary-item"
-                >Biegła obsługa komputera i pakietu MS Office</span
-              >
-            </li>
-            <li>
-              <span class="list-secondary-item"
-                >Biegła obsługa urządzeń HPLC, UV-vis, FTIR</span
-              >
-            </li>
-            <li>
-              <span class="list-secondary-item"
-                >Podstawowa znajomość obsługi aparatu NMR</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="hobby-block">
-          <h2 class="header-secondary">Zainteresowania</h2>
-          <ul class="list-secondary">
-            <li>
-              <span class="list-secondary-item"
-                >Naprawa urządzeń elektronicznych (telefony, komputery,
-                gramofony, VHS itp.)</span
-              >
-            </li>
-            <li>
-              <span class="list-secondary-item"
-                >Czytanie książek w języku angielskim</span
-              >
-            </li>
-            <li>
-              <span class="list-secondary-item">HTML, CSS, Python</span>
-            </li>
-          </ul>
-        </div>
-        <div class="acceptation-block">
-          <p class="contact-links">
-            Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
-            prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.
-          </p>
-        </div>
-      </aside>
+      <br />
+      <br />
+      {% block post %} {% endblock post %}
     </div>
-  </body>
-</html>
+
+    <div class="jobs">
+      <h2 class="header-primary">Doświadczenie</h2>
+      <h3 class="job-position">
+        Adiunkt naulowo-dydaktyczny
+        <span class="highlight">Politechnika Wrocławska</span>
+      </h3>
+      <p class="job-date">10.2011 - obecnie</p>
+      <ul class="job-list">
+        <li>Synteza, oczyszczanie i analiza związków fosforoorganicznych</li>
+        <li>Biotransformacje hydroksyfosfonianów i hydroksyfosfinianów</li>
+        <li>
+          Określanie konfiguracji absolutnej różnych klas związków za pomocą NMR
+        </li>
+        <li>
+          Udział w konferencjach krajowych i międzynarodowych - prezentacje,
+          postery
+        </li>
+        <li>Publikacje o zasięgu międzynarodowym</li>
+        <li>Patenty</li>
+      </ul>
+      <h3 class="job-position">
+        Stażysta w Maco Productions Polonia Sp. z o.o.
+        <span class="highlight">Program „Mozart” Miasta Wrocław</span>
+      </h3>
+      <p class="job-date">10.2016 – 09.2017</p>
+      <ul class="job-list">
+        <li>
+          Opracowanie nowej metody oznaczania 5-(hydroksymetylo)furfuralu
+          zgodnie z normami FDA, USP i ICH oraz walidacja opracowanej metody
+        </li>
+      </ul>
+      <h3 class="job-position">
+        Specjalista ds walidacji
+        <span class="highlight">Maco Productions Polonia Sp. z o.o. </span>
+      </h3>
+      <p class="job-date">01.2015 - 01.2016</p>
+      <ul class="job-list">
+        <li>Walidacja metod analitycznych zgodnie z normami ICH, FDA i USP</li>
+      </ul>
+      <h3 class="job-position">
+        Stażysta w Maco Productions Polonia Sp. z o.o.
+        <span class="highlight"
+          >Projekt „Innowacyjny transfer” - Agencja Rozwoju Innowacji S.A.</span
+        >
+      </h3>
+      <p class="job-date">05.2013 – 07.2013</p>
+      <ul class="job-list">
+        <li>Analiza składu zanieczyszczeń płynu medycznego</li>
+      </ul>
+      <h3 class="job-position">
+        Asystent naulowo-dydaktyczny
+        <span class="highlight">Politechnika Wrocławska</span>
+      </h3>
+      <p class="job-date">03.2008 - 09.2011</p>
+      <ul class="job-list">
+        <li>Badania naukowe</li>
+        <li>Dydaktyka</li>
+      </ul>
+      <h3 class="job-position">
+        Staż podoktorski
+        <span class="highlight">Uniwersytet Louisa Pasteura w Strasburgu</span>
+      </h3>
+      <p class="job-date">02.2007 – 01.2008</p>
+      <ul class="job-list">
+        <li>
+          Otrzymanie i badanie biopolimerów do wprowadzania leków drogą
+          pokarmową
+        </li>
+      </ul>
+    </div>
+    <div class="education">
+      <h2 class="header-primary">Edukacja</h2>
+      <h3 class="degree">
+        Doktor nauk chemicznych
+        <span class="highlight">Politechnika Wrocławska</span>
+      </h3>
+      <ul class="education-list">
+        <li>
+          Wyróżnienie pracy doktorskiej nadane przez Politechnikę Wrocławską
+        </li>
+        <li>
+          Wyróżnienie w konkursie na najlepszą pracę doktorską nadane przez
+          Polskie Towarzystwo Chemiczne (Łódź, 12.09.2008).
+        </li>
+      </ul>
+
+      <h3 class="degree">
+        Magister chemii
+        <span class="highlight">Uniwersytet Wrocławski</span>
+      </h3>
+      <ul class="education-list">
+        <li>Coroczne stypendia naukowe</li>
+      </ul>
+    </div>
+    <div class="certificates">
+      <h2 class="header-primary">Kursy i szkolenia</h2>
+
+      <ul class="certificates-list">
+        <li>Praktyczne aspekty analizy białek i peptydów metodą HPLC</li>
+        <li>
+          Szkolenie z zakresu obsługi cytometru przepływowego BD FACSVerse
+        </li>
+        <li>
+          Advanced Academic English – szkolenie z zakresu dydaktyki w j. obcym
+        </li>
+        <li>Szkolenie z zakresu podstaw chromatografii gazowej</li>
+        <li>
+          Podstawy zastosowania technik chromatograficznych w analityce oraz
+          optymalizacja metod HPLC
+        </li>
+        <li>
+          Walidacja metod analitycznych według wymagań farmaceutycznych oraz
+          normy ISO 17025
+        </li>
+        <li>
+          Dobra praktyka wytwarzania (GMP) – wymagania prawne, zasady i
+          wdrożenie systemu
+        </li>
+        <li>
+          Dobra praktyka laboratoryjna (GLP) – praktyczne aspekty wdrożenia w
+          laboratorium
+        </li>
+        <li>
+          Przygotowanie materiałów i prowadzenie zajęć dydaktycznych z
+          wykorzystaniem ICT
+        </li>
+        <li>
+          Projektowanie i realizacja instalacji technologicznej do produkcji
+          leków biotechnologicznych
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button onclick="window.print()">
+        <span class="print-button">Wydrukuj CV</span>
+      </button>
+      <br />
+      <a href="{% url 'home' %}">Back</a>
+    </div>
+  </main>
+  <aside>
+    <h1>Paulina Majewska</h1>
+    <div>tu bedzie jakieś zdjęcie</div>
+    <div class="contact-block">
+      <h2 class="header-secondary">Kontakt</h2>
+      <p class="contact-links">
+        <span class="bold">Adres:</span>
+
+        ul. Sobótki 19A, 55-040 Kobierzyce<br />
+
+        <span class="bold">Tel:</span>
+        <a class="contact-links" href="tel:792096616">792096616</a><br />
+        <span class="bold">E-mail:</span>
+        <a class="contact-links" href="mailto:majewska.p@gmail.com"
+          >majewska.p@gmail.com</a
+        >
+      </p>
+
+      <br />
+      {% for lab in laboratorium %}
+      <p><a href="/lab/{{ lab.id }}"> {{ lab.Numer_laboratorium }} </a></p>
+      {% endfor %}
+    </div>
+
+    <div class="media-block">
+      <h2 class="header-secondary">Społeczności</h2>
+      <p class="contact-links">
+        <span class="bold">LinkedIn:</span>
+        <a
+          class="contact-links"
+          href="https://pl.linkedin.com/in/paulina-majewska-378348108"
+          >https://pl.linkedin.com/in/paulina-majewska-378348108</a
+        ><br />
+        <span class="bold">Goldenline:</span>
+        <a
+          class="contact-links"
+          href="https://www.goldenline.pl/paulina-majewska20/"
+          >https://www.goldenline.pl/paulina-majewska20/</a
+        >
+      </p>
+    </div>
+
+    <div class="soft-skils-block">
+      <h2 class="header-secondary">Umiejętności</h2>
+      <ul class="list-secondary">
+        <li>
+          <span class="list-secondary-item"
+            >Język angielski – poziom B2 (prezentacje, pisanie publikacji,
+            branżowa literatura)</span
+          >
+        </li>
+        <li>
+          <span class="list-secondary-item"
+            >Biegła obsługa komputera i pakietu MS Office</span
+          >
+        </li>
+        <li>
+          <span class="list-secondary-item"
+            >Biegła obsługa urządzeń HPLC, UV-vis, FTIR</span
+          >
+        </li>
+        <li>
+          <span class="list-secondary-item"
+            >Podstawowa znajomość obsługi aparatu NMR</span
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="hobby-block">
+      <h2 class="header-secondary">Zainteresowania</h2>
+      <ul class="list-secondary">
+        <li>
+          <span class="list-secondary-item"
+            >Naprawa urządzeń elektronicznych (telefony, komputery, gramofony,
+            VHS itp.)</span
+          >
+        </li>
+        <li>
+          <span class="list-secondary-item"
+            >Czytanie książek w języku angielskim</span
+          >
+        </li>
+        <li>
+          <span class="list-secondary-item">HTML, CSS, Python</span>
+        </li>
+      </ul>
+    </div>
+    <div class="acceptation-block">
+      <p class="contact-links">
+        Wyrażam zgodę na przetwarzanie moich danych osobowych w celu prowadzenia
+        rekrutacji na aplikowane przeze mnie stanowisko.
+      </p>
+    </div>
+  </aside>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Dodaj wpis</h1>
+
+<form method="POST" class="post-form">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="btn btn-outline-dark">Post</button>
+</form>
+  <br />
+  <br />
+  <a href="{% url 'post' %}">Back</a>
+
+
+  {% endblock %}
+</from>

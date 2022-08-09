@@ -20,6 +20,6 @@ from Urzadzenia.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Urzadzenia.urls')),
-    path('lab/<id>/', lab, name='lab'),
-    path('dev/<id>/', dev, name='dev'),
+    #path('lab/<id>/', lab, name='lab'),
+    #path('dev/<id>/', dev, name='dev'),
 ]

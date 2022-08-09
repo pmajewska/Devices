@@ -1,9 +1,11 @@
+from webbrowser import get
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Urzadzenia, Laboratorium
+from .models import Post, Urzadzenia, Laboratorium
+from django.views.generic import ListView, DetailView, CreateView
 
 def home(request):
-    return render(request, 'szablon.html', {})
+    return render(request, 'home.html', {})
 
 
 def index(request):
@@ -23,3 +25,30 @@ def dev(request, id):
     laboratorium = Laboratorium.objects.all()
     dane = {'dev_number': dev_number, 'laboratorium': laboratorium}
     return render(request, 'urzadzenia.html', dane)
+
+def post(request, id):
+    post_number = Post.objects.get(pk=id)
+    post = Post.objects.all()
+    dane = {'post_number': post_number, 'post': post}
+    return render(request, 'post.html', dane)
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'post.html'
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'post_details.html'
+
+class PostAddView(CreateView):
+    model = Post
+    template_name = 'post_add.html'
+    fields = '__all__'
+
+class PostView(ListView):
+    model = Post
+    template_name = 'home.html'
+
+class SzablonView(ListView):
+    model = Post
+    template_name = 'szablon.html'

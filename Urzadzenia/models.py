@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
+from django.utils import timezone
+
 
 class Laboratorium(models.Model):
     def __str__(self):
@@ -35,8 +38,16 @@ class Urzadzenia(models.Model):
 class Post(models.Model):
     Nazwa = models.ForeignKey(Urzadzenia, on_delete=models.CASCADE, null=True)
     Urzytkownik = models.ForeignKey(User, on_delete=models.PROTECT)
-    Czas_i_data_rozpoczęcia_pracy = models.DateTimeField()
-    Czas_i_data_zakończenia_pracy = models.DateTimeField()
+    Czas_i_data_rozpoczęcia_pracy = models.DateTimeField(default=timezone.now)
+    Czas_i_data_zakończenia_pracy = models.DateTimeField(default=timezone.now)
     Uwagi = models.TextField(blank=True)
     def __str__(self):
         return str(self.Nazwa) + ' | ' + str(self.Urzytkownik) + ' | ' + str(self.Czas_i_data_rozpoczęcia_pracy)
+    
+    def get_absolute_url(self):
+        return reverse('post_detail', args=(str(self.id)))
+
+    class Meta:
+        verbose_name = 'Wpis urzytkownika'
+        verbose_name_plural = 'Wpisy urzytkowników'
+

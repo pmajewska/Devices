@@ -1,6 +1,8 @@
 body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #10ff93, #40c7be);
   font-family: "Montserrat", sans-serif;
-  background-color: rgba(155, 143, 143, 0.933);
 }
 .wrapper {
   display: flex;

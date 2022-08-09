@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Post </h1>
+
+<a href="{% url 'add_post' %}">Dodaj wpis</a>
+
+<ul>
+{% for post in object_list %}
+<li>
+    <a href="{% url 'post_detail' post.pk %}">{{ post.Nazwa }}</a> - {{ post.Urzytkownik.first_name }} {{ post.Urzytkownik.last_name }} - {{ post.Czas_i_data_rozpoczecia_pracy }} </br>
+    {{ post.Uwagi }}</li>
+
+
+{% endfor %}
+</ul>
+<br />
+{% endblock %}
+
+blabla
