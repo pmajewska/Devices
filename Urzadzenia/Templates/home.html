@@ -1,11 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Wpisy</h1>
+<h2 class="header-primary">Wpisy</h2>
 
-<li><a href="{% url 'post' %}"> wpisy </a></li>
+<h3 class="job-position"><a href="{% url 'post' %}"> wpisy </a></h3>
+<br />
+<br />
 
-<h1>Szablon</h1>
+<h2 class="header-primary">Laby</h2>
 
-<li><a href="{% url 'szablon' %}"> szablon </a></li>
+<h3 class="job-position"><a href="{% url 'lab' %}"> lab </a></h3>
 
 {% endblock %}

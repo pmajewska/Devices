@@ -8,11 +8,6 @@ def home(request):
     return render(request, 'home.html', {})
 
 
-def index(request):
-    laboratorium = Laboratorium.objects.all()
-    dane = {'laboratorium': laboratorium}
-    return render(request, 'szablon.html', dane)
-
 def lab(request, id):
     lab_number = Laboratorium.objects.get(pk=id)
     lab_urzadzenie = Urzadzenia.objects.filter(Numer_laboratorium = lab_number)
@@ -35,6 +30,7 @@ def post(request, id):
 class PostListView(ListView):
     model = Post
     template_name = 'post.html'
+    ordering = ['-id']
 
 class PostDetailView(DetailView):
     model = Post
@@ -49,6 +45,10 @@ class PostView(ListView):
     model = Post
     template_name = 'home.html'
 
-class SzablonView(ListView):
-    model = Post
-    template_name = 'szablon.html'
+class LabView(ListView):
+    model = Laboratorium
+    template_name = 'lab.html'
+
+class LabDetailView(ListView):
+    model = Laboratorium
+    template_name = 'lab_details.html'

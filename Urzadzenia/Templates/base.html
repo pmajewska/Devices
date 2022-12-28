@@ -56,10 +56,52 @@
         </div>
       </nav>
     </div>
-    <div>{% block content %} {% endblock %}</div>
-
-
-    <h1>Hello, world!</h1>
+    
+    <div class="wrapper">
+      <main>          
+    
+          <div class="jobs">
+            <p class="description">Tu będzie główny div</p>
+      
+            {% block content %} 
+            
+            {% endblock %}
+          
+          </div>
+      </main>
+      <aside>
+        <div class="contact-block">
+          <h2 class="header-secondary">Kontakt</h2>
+          <p class="contact-links">
+            <span class="bold">Adres:</span>
+    
+            ul. Wybrzeże Wyspiańskiego 29, 50-370 Wrocław<br />
+    
+            <span class="bold">Telefon do sekretariatu:</span>
+            <a class="contact-links" href="tel:713202427">713202427</a><br />
+          </p>
+    
+          <br />
+        </div>
+    
+        <div class="media-block">
+          <h2 class="header-secondary">Strony internetowe</h2>
+          <p class="contact-links">
+            <span class="bold">Katedra:</span>
+            <a
+              class="contact-links"
+              href="https://wch.pwr.edu.pl/o-wydziale/katedry/z1"
+              >Katedra Biochemii, Biologii Molekularnej i Biotechnologii</a
+            ><br />
+            <span class="bold">Wydział:</span>
+            <a class="contact-links" href="https://wch.pwr.edu.pl/"
+              >Wydział Chemiczny</a
+            >
+          </p>
+        </div>
+      </aside>
+    </div>
+    
 
     <!-- JavaScript -->
 

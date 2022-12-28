@@ -9,7 +9,7 @@
 <ul>
 {% for post in object_list %}
 <li>
-    <a href="{% url 'post_detail' post.pk %}">{{ post.Nazwa }}</a> - {{ post.Urzytkownik.first_name }} {{ post.Urzytkownik.last_name }} - {{ post.Czas_i_data_rozpoczecia_pracy }} </br>
+    <a href="{% url 'post_detail' post.pk %}">{{ post.Nazwa }}</a> - {{ post.Urzytkownik.first_name }} {{ post.Urzytkownik.last_name }} - {{ post.Czas_i_data_rozpoczęcia_pracy }} </br>
     {{ post.Uwagi }}</li>
 
 

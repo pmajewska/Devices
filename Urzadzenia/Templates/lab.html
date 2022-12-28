@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Laby</h1>
+
+<ul>
+  {% for lab in object_list %}
+  <li>
+    <a href="{% url 'lab_detail' lab.pk %}">{{ lab.Numer_laboratorium }}</a> -
+  </li>
+
+  {% endfor %}
+</ul>
+<br />
+
+<a href="{% url 'home' %}" class="btn btn-outline-dark">Back</a>
+
+{% endblock %}
